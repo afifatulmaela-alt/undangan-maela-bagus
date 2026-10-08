@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maela & Bagus Wedding Invitation</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Georgia, serif;
+      background: #fff7f8;
+      text-align: center;
+      color: #5f4a4f;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    .guest {
+      font-size: 20px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 13px 25px;
+      background: #d9a0ad;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-family: Arial, sans-serif;
+    }
+
+    .small {
+      font-size: 13px;
+      margin-bottom: 20px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <p>THE WEDDING OF</p>
+
+    <h1>Maela & Bagus</h1>
+
+    <p>Kepada Yth.</p>
+
+    <div class="guest" id="namaTamu">
+      Tamu Undangan
+    </div>
+
+    <p class="small">
+      Tanpa mengurangi rasa hormat, kami mengundang Anda
+      untuk hadir di hari bahagia kami.
+    </p>
+
+    <a
+      class="button"
+      href="https://nabire.my.canva.site/maela-bagus-weding-invitation"
+    >
+      Buka Undangan
+    </a>
+
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const nama = params.get("to");
+
+    if (nama) {
+      document.getElementById("namaTamu").textContent =
+        decodeURIComponent(nama.replace(/\+/g, " "));
+    }
+  </script>
+
+</body>
+</html>
